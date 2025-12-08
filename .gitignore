@@ -1,6 +1,4 @@
 .DS_Store
-node_modules
-dist
 requestConfig.json
 # local env files
 .env.local
