@@ -1,0 +1,102 @@
+* {
+  font-family: '微软雅黑', 'Microsoft YaHei', Arial, sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  /* 明亮模式默认变量 */
+  --bg-color: #f9f9fb;
+  --text-color: #333333;
+  --card-bg: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+/* 黑暗模式变量 */
+.dark-mode {
+  --bg-color: #383838;
+  --text-color: #E5E5E5;
+  --card-bg: #242424;
+}
+html, body {
+  height: 100%;
+  font-size: 14px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.todo-card {
+  background-color: var(--card-bg);
+}
+img {
+  vertical-align: middle;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+}
+.textCenter {
+  text-align: center;
+}
+.c-333{
+  color: #333;
+}
+@each $fsSize in 28 26 24 22 20 18 16 14 12 {
+  .fs#{$fsSize} {
+    font-size: #{$fsSize}px;
+  }
+}
+@for $px from 0 through 100 {
+  .pd#{$px} {
+    padding: #{$px}px;
+  }
+  .pl#{$px} {
+    padding-left: #{$px}px;
+  }
+  .pr#{$px} {
+    padding-right: #{$px}px;
+  }
+  .pt#{$px} {
+    padding-top: #{$px}px;
+  }
+  .pb#{$px} {
+    padding-bottom: #{$px}px;
+  }
+
+  .mg#{$px} {
+    margin: #{$px}px;
+  }
+  .ml#{$px} {
+    margin-left: #{$px}px;
+  }
+  .mr#{$px} {
+    margin-right: #{$px}px;
+  }
+  .mt#{$px} {
+    margin-top: #{$px}px;
+  }
+  .mb#{$px} {
+    margin-bottom: #{$px}px;
+  }
+
+  .w#{$px} {
+    width: #{$px}px;
+  }
+  .h#{$px} {
+    height: #{$px}px;
+  }
+}
+@function calcFontSize($n) {
+  @return $n / 1.25;
+}
+@function calcWidth($n) {
+  @return $n / 1.25;
+}
+@function calcHeight($n) {
+  @return $n / 1.25;
+}
+.el-tabs .el-tabs__item{
+  color: var(--text-color);
+}
