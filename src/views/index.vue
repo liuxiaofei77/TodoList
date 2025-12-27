@@ -139,6 +139,7 @@ export default defineComponent({
       return (
         localStorage.getItem('list' + this.activeName) || [
           {
+            id:1,
             title: 'demo',
             level: 1,
             startTime: 'sbg',
@@ -146,6 +147,7 @@ export default defineComponent({
             remark: 'demoresfafasffsffsfsfsfmark',
           },
           {
+            id:2,
             title: 'demo',
             level: 1,
             startTime: 'sbg',

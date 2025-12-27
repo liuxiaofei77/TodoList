@@ -10,17 +10,22 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    outDir: 'dist', // 打包输出目录
+    assetsDir: 'assets' // 静态资源目录
+  },
+  base: './', // 静态资源公共路径（适配非根目录部署）,
   plugins: [
     vue(),
     vueJsx(),
     vueDevTools(),
     // 自动导入 Element Plus 相关 API
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
     // 自动导入 Element Plus 组件
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
   ],
   resolve: {
